@@ -389,8 +389,8 @@ class OAuthRequest
     {
         $parts = parse_url($this->http_url);
 
-        $port = @$parts['port'];
-        $scheme = $parts['scheme'];
+        $port = isset($_SERVER['HTTP_X_FORWARDED_PORT']) ? $_SERVER['HTTP_X_FORWARDED_PORT'] : @$parts['port'];
+        $scheme = isset($_SERVER['HTTP_X_FORWARDED_PROTO']) ? $_SERVER['HTTP_X_FORWARDED_PROTO'] : $parts['scheme'];
         $host = $parts['host'];
         $path = @$parts['path'];
 
