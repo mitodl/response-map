@@ -38,6 +38,7 @@ A word cloud of the keywords in all the responses
 |-----------|-------|-------------|
 | showcloud | true  | to have the word cloud appear below the map |
 | usecolor  | true  | to have the word cloud in color instead of black and white |
+| skip_form | true | to show the map before requiring any input |
 ### Form Labels
 Names for the form fields. For example, we want the location field to be label "Place", set the custom parameter as `location_label=Place`
 
