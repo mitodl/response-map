@@ -34,11 +34,12 @@ You can use the custom parameters below to customize parts of the tool. To do so
 ### Word Cloud
 A word cloud of the keywords in all the responses
 
-| Parameter | Value | Description |
-|-----------|-------|-------------|
-| showcloud | true  | to have the word cloud appear below the map |
-| usecolor  | true  | to have the word cloud in color instead of black and white |
-| skip_form | true | to show the map before requiring any input |
+| Parameter    | Value | Description |
+|--------------|-------|-------------|
+| showcloud    | true  | to have the word cloud appear below the map |
+| usecolor     | true  | to have the word cloud in color instead of black and white |
+| skip_form    | true  | to show the map before requiring any input |
+| allow_upload | true  | to show the image upload form |
 ### Form Labels
 Names for the form fields. For example, we want the location field to be label "Place", set the custom parameter as `location_label=Place`
 
