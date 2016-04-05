@@ -195,7 +195,12 @@ mysqli_close($conn);
                   name="user_response"><?php echo isset($_POST['user_response']) ? $_POST['user_response'] : '' ?></textarea>
     </div>
 
-    <div class="upload-group">
+    <?php if (isset($_SESSION['config']['custom_allow_upload']) && $_SESSION['config']['custom_allow_upload'] == 'true') {
+        $upload_style = '';
+    } else {
+        $upload_style='display: none;';
+    } ?>
+    <div class="upload-group" style="<?php echo $upload_style ?>">
         <!-- The fileinput-button span is used to style the file input field as button -->
         <span
             class="filelimit"><?php echo 'Maximum file size is ' . (return_bytes(ini_get('post_max_size')) / 1024 / 1024) . ' MB'; ?></span>
